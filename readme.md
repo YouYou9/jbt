@@ -11,7 +11,7 @@ https://www.bible.com/bible/1820/GEN
 本の名前は最後の3の文字列です。
 
 ## 必須要件
-＊YouVersion-API　　
+＊YouVersion-API  
 ＊COEIROINK
 
 必須要件には、APIサーバーで接続します。ポート番号を意図的に変えると、使えなくなります。
