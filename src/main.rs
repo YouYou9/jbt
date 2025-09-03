@@ -25,8 +25,8 @@ async fn main() {
         }
     }
 
-    let mut n_verse:i32 = args[2].parse().unwrap();
-    let mut n_chapter:i32 = args[3].parse().unwrap();
+    let mut n_verse:i32 = args[3].parse().unwrap();
+    let mut n_chapter:i32 = args[2].parse().unwrap();
     for _ in 1..150{
         /*
         book:"John".to_string(),
