@@ -39,6 +39,7 @@ pub async fn create_url_from_bible_info(server_dns:String,info:BibleInfo,not_fou
                             *not_found_count += 1;
                             if n.message != "Verse not found" || *not_found_count >= 2
                             {
+                                println!("{}",n.message);
                                 std::process::exit(0);
                             }
                             return Err(true)

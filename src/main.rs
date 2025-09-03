@@ -47,14 +47,17 @@ async fn main() {
         {
             Ok(result) => {
                 time = Instant::now();
+                println!("Chapter {}, Verse {} ",n_chapter,n_verse);
+                println!("?");
                 synth(result).await;
                 n_verse += 1;
             },
             Err(result) => {
                 if result{
+                    println!("!");
                     n_verse = 1;
                     n_chapter += 1;
-                    if (time - Instant::now()).as_secs() != 0{
+                    if (time - Instant::now()).as_secs() == 0{
                         not_found_count = 0;
                     }
                 }else{
@@ -63,5 +66,4 @@ async fn main() {
             },
         }
     }
-    println!("The maximum number of readings has been reached. Chapter {}, Verse {} has been read.",n_chapter,n_verse);
 }
