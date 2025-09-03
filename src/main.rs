@@ -25,8 +25,8 @@ async fn main() {
         }
     }
 
-    let mut n_verse = 1;
-    let mut n_chapter = 1;
+    let mut n_verse:i32 = args[2].parse().unwrap();
+    let mut n_chapter:i32 = args[3].parse().unwrap();
     for _ in 1..150{
         /*
         book:"John".to_string(),
@@ -36,8 +36,8 @@ async fn main() {
          */
         let info = BibleInfo{
             book:args[1].to_string(),
-            chapter:args[2].to_string(),
-            verses:args[3].to_string(),
+            chapter:n_chapter.to_string(),
+            verses:n_verse.to_string(),
             version:args[4].to_string(),
         };
 
@@ -62,6 +62,6 @@ async fn main() {
                 }
             },
         }
-        println!("The maximum number of readings has been reached. Chapter {}, Verse {} has been read.",n_chapter,n_verse);
     }
+    println!("The maximum number of readings has been reached. Chapter {}, Verse {} has been read.",n_chapter,n_verse);
 }
