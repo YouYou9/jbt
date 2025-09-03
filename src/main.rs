@@ -27,7 +27,7 @@ async fn main() {
 
     let mut n_verse = 1;
     let mut n_chapter = 1;
-    for _ in 1..5{
+    for _ in 1..150{
         /*
         book:"John".to_string(),
         chapter:n_chapter.to_string(),
@@ -62,5 +62,6 @@ async fn main() {
                 }
             },
         }
+        println!("The maximum number of readings has been reached. Chapter {}, Verse {} has been read.",n_chapter,n_verse);
     }
 }
